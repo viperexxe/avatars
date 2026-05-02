@@ -1,0 +1,67 @@
+/* LeMage Avatars - Premium Circular Styles */
+
+/* Base Styles for all avatars */
+.avatar img, 
+.profile-avatar img,
+.postprofile .avatar img,
+.lemage-last-post-avatar img {
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    display: block !important;
+}
+
+/* Force specific sizes for certain areas to ensure they remain round */
+.profile-avatar img,
+#viewprofile .avatar img {
+    width: 160px !important;
+    height: 160px !important;
+    max-width: 160px !important;
+    max-height: 160px !important;
+    margin: 0 auto;
+}
+
+
+.postprofile .avatar img {
+    width: 90px !important;
+    height: 90px !important;
+}
+
+.avatar:hover img,
+.profile-avatar:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Last Post Avatar Styles */
+.lemage-last-post-avatar {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.lemage-last-post-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Fix for oval avatars in header/navbar */
+.headerbar .avatar img,
+.navbar .avatar img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Responsive adjustment */
+@media screen and (max-width: 700px) {
+    .lemage-last-post-avatar {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+    }
+}

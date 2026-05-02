@@ -1,0 +1,13 @@
+services:
+    lemage.avatars.listener:
+        class: lemage\avatars\event\listener
+        arguments:
+            - '@avatar.manager'
+            - '@user'
+            - '@request'
+            - '@dbal.conn'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+        tags:
+            - { name: kernel.event_subscriber }
+
